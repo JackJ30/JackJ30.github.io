@@ -2798,18 +2798,40 @@ input, select, textarea {
 
 		}
 
+.v-effect-link {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+.v-effect-link li {
+	display: inline-block;
+	min-width: 5em;
+	margin: 0 0.5em;
+}
+.v-effect-link a {
+	text-decoration: none;
+	display: block;
+	position: relative;
+	color: black;
+	padding:.5em 0
+}
+
 /* Icons */
 
 	ul.icons {
 		cursor: default;
+		text-align: center;
 		list-style: none;
-		padding-left: 0;
+		margin: 0;
+		padding: 0;
 	}
 
 		ul.icons li {
 			display: inline-block;
 			padding: 0 0.5rem 0 0;
 			vertical-align: middle;
+			margin: 0 0.5em;
 		}
 
 			ul.icons li:last-child {
@@ -3605,27 +3627,23 @@ input, select, textarea {
 
 /* Nav */
 
-	#nav {
-		color: #ffffff;
-		display: -moz-flex;
-		display: -webkit-flex;
-		display: -ms-flex;
-		display: flex;
-		-moz-transition: -moz-transform 1s ease, opacity 1s ease;
-		-webkit-transition: -webkit-transform 1s ease, opacity 1s ease;
-		-ms-transition: -ms-transform 1s ease, opacity 1s ease;
-		transition: transform 1s ease, opacity 1s ease;
-		background: rgba(255, 255, 255, 0.175);
-		height: 4rem;
-		line-height: 4rem;
-		margin: -4rem auto 0 auto;
-		overflow: hidden;
-		padding: 0 2rem 0 0;
-		position: relative;
-		width: calc(100% - 4rem);
-		max-width: 72rem;
-		z-index: 2;
-	}
+#nav {
+	color: #ffffff;
+	-moz-transition: -moz-transform 1s ease, opacity 1s ease;
+	-webkit-transition: -webkit-transform 1s ease, opacity 1s ease;
+	-ms-transition: -ms-transform 1s ease, opacity 1s ease;
+	transition: transform 1s ease, opacity 1s ease;
+	background: rgba(255, 255, 255, 0.175);
+	height: 4rem;
+	line-height: 4rem;
+	margin: -4rem auto 0 auto;
+	overflow: hidden;
+	padding: 0 0 0 0;
+	position: relative;
+	width: calc(100% - 4rem);
+	max-width: 72rem;
+	z-index: 2;
+}
 
 		#nav ul.divided li {
 			border-top-color: #ffffff;
@@ -3701,7 +3719,7 @@ input, select, textarea {
 		}
 
 			#nav ul.links li {
-				display: block;
+				display: inline-block;
 				padding-left: 0;
 			}
 
@@ -3710,10 +3728,10 @@ input, select, textarea {
 					-webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 					-ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 					transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-					display: block;
+					display: inline-block;
 					font-size: 0.8rem;
 					outline: none;
-					padding: 0 2rem;
+					padding: 0 0;
 				}
 
 					#nav ul.links li a:hover {
