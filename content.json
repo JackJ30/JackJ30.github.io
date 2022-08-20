@@ -1,0 +1,25 @@
+{
+  "active-pages": [
+    {
+      "type": "programming",
+      "title": "I Programmed This!",
+      "date": "January 1, 1970",
+      "description": "We codin. We codin. We codin. We codin. We codin. We codin. We codin. We codin. We codin. We codin. We codin. We codin. We codin. We codin. We codin. We codin. We codin. We codin.",
+      "link": "./pages/programmingtest.html"
+    },
+    {
+      "type": "graphics",
+      "title": "I Arted This!",
+      "date": "January 1, 1970",
+      "description": "We artin. We artin. We artin. We artin. We artin. We artin. We artin. We artin. We artin. We artin. We artin. We artin. We artin. We artin. We artin. We artin. We artin. We artin.",
+      "link": "./pages/graphicstest.html"
+    },
+    {
+      "type": "graphics",
+      "title": "I Arted This!",
+      "date": "January 1, 1970",
+      "description": "We artin. We artin. We artin. We artin. We artin. We artin. We artin. We artin. We artin. We artin. We artin. We artin. We artin. We artin. We artin. We artin. We artin. We artin.",
+      "link": "./pages/graphicstest.html"
+    }
+  ]
+}
