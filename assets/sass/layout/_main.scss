@@ -75,7 +75,7 @@
 
 		> .posts {
 			@include fixed-grid((
-				columns:			2,
+				columns:			1,
 				gutters:			(_size(padding) * 4),
 				horizontal-align:	center,
 				vertical-align:		flex-start,

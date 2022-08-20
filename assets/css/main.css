@@ -2586,6 +2586,15 @@ input, select, textarea {
 			font-family: 'Font Awesome 5 Brands';
 		}
 
+/* Column Header */
+
+	.column-header {
+		text-align: center;
+		font-family: "Merriweather", Georgia, serif;
+		font-size: 3rem;
+		font-weight: bold;
+	}
+
 /* Image */
 
 	.image {
@@ -2634,7 +2643,7 @@ input, select, textarea {
 
 		.image.main {
 			display: block;
-			margin: 4rem 0;
+			margin: 2rem 0;
 			width: 100%;
 		}
 
@@ -3307,7 +3316,7 @@ input, select, textarea {
 
 	#intro {
 		color: #ffffff;
-		padding: 8rem 4rem 6rem 4rem ;
+		padding: 0rem 4rem 8rem 4rem ;
 		-moz-align-items: center;
 		-webkit-align-items: center;
 		-ms-align-items: center;
@@ -3537,8 +3546,8 @@ input, select, textarea {
 		-webkit-user-select: none;
 		-ms-user-select: none;
 		user-select: none;
-		height: 20rem;
-		padding-bottom: 8rem;
+		height: 11rem;
+		padding-bottom: 5rem;
 		position: relative;
 		text-align: center;
 		z-index: 2;
@@ -3607,7 +3616,7 @@ input, select, textarea {
 
 			#header {
 				height: 14rem;
-				padding-bottom: 4rem;
+				padding-bottom: 2rem;
 			}
 
 		}
@@ -3615,7 +3624,7 @@ input, select, textarea {
 		@media screen and (max-width: 736px) {
 
 			#header {
-				padding-bottom: 3rem;
+				padding-bottom: 1rem;
 			}
 
 				#header .logo {
@@ -3641,7 +3650,7 @@ input, select, textarea {
 	padding: 0 0 0 0;
 	position: relative;
 	width: calc(100% - 4rem);
-	max-width: 72rem;
+	max-width: 84rem;
 	z-index: 2;
 }
 
@@ -3778,7 +3787,7 @@ input, select, textarea {
 		position: relative;
 		margin: 0 auto;
 		width: calc(100% - 4rem);
-		max-width: 72rem;
+		max-width: 84rem;
 		z-index: 2;
 	}
 
@@ -3797,7 +3806,8 @@ input, select, textarea {
 		}
 
 		#main > .post {
-			padding: 8rem 8rem 6rem 8rem ;
+			padding: 2rem 8rem 6rem 8rem ;
+			justify-content: center;
 		}
 
 			#main > .post header.major > .date {
@@ -3840,6 +3850,16 @@ input, select, textarea {
 					}
 
 			}
+
+		.posts-container {
+			float: left;
+		}
+
+		.posts-container section {
+			padding: 2%;
+			width: 50%;
+			float: left;
+		}
 
 		#main > .posts {
 			display: -moz-flex;
