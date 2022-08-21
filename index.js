@@ -9,24 +9,43 @@ function showArticles()
     {
         let obj = content["active-pages"][i];
 
-        let clone = document.getElementById("template-article").cloneNode( true );
+        var parent;
         switch (obj.type) {
             case "programming":
-                document.getElementById("programming-articles").appendChild(clone);
-
+                parent = document.getElementById("programming-articles");
                 break;
             case "graphics":
-                document.getElementById("graphics-articles").appendChild(clone);
-
+                parent = document.getElementById("graphics-articles");
                 break;
         }
 
-        clone.style.display = "block";
-        clone.id = "article" + i.toString();
+        var newArticle = document.createElement("article");
+        parent.appendChild(newArticle);
 
-        clone.childNodes[1].childNodes[1].textContent = obj.date;
-        clone.childNodes[1].childNodes[3].textContent = obj.title;
-        clone.childNodes[5].textContent = obj.description;
-        console.log(clone.childNodes[3].);
+        var header = newArticle.appendChild(document.createElement("header"));
+        var span = header.appendChild(document.createElement("span"));
+        span.className = "date";
+        span.textContent = obj.date;
+        var titleh2 = header.appendChild(document.createElement("h2"));
+        var titleLink = titleh2.appendChild(document.createElement("a"));
+        titleLink.href = obj.link;
+        titleLink.textContent = obj.title;
+
+        var imageLink = newArticle.appendChild(document.createElement("a"));
+        imageLink.href = obj.link;
+        imageLink.className = "image fit";
+        var image = imageLink.appendChild(document.createElement("img"));
+        image.src = obj.image;
+        image.alt = "";
+
+        var description = newArticle.appendChild(document.createElement("p"));
+        description.textContent = obj.description;
+
+        var specialActions = newArticle.appendChild(document.createElement("ul"));
+        specialActions.className = "actions special";
+        var viewPageLink = specialActions.appendChild(document.createElement("li")).appendChild(document.createElement("a"));
+        viewPageLink.href = obj.link;
+        viewPageLink.className = "button";
+        viewPageLink.textContent = "View Page";
     }
 }
