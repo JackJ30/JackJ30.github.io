@@ -76,7 +76,7 @@ ul {
 }
 
 #intro {
-    padding-top: 45vh;
+    padding-top: 48vh;
     text-align: center;
     display: flex;
     align-items: center;
@@ -86,11 +86,13 @@ ul {
     width: 100%;
     height: 1vh;
 
+    transform: translateY(3vh);
     -webkit-transition: transform 1s;
     transition: transform 1s;
 }
 
 .loaded #intro {
+    transform: translateY(0vh);
 }
 
 #intro h1 {
