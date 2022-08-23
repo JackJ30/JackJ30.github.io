@@ -67,13 +67,13 @@
 .interest .option_inner {
     width: 15.5vh;
     height: 14vh;
-    background-color: #ffffff;
+    background-color: #11151C;
     border-radius: 1vh;
     text-align: center;
     cursor: pointer;
-    color: #717981;
+    color: #FDFFFC;
     display: block;
-    border: 0.85vh solid #717981;
+    border: 0.85vh solid #FDFFFC;
     position: relative;
     padding: 1.3vh;
     padding-top: 2.8vh;
