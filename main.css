@@ -98,10 +98,16 @@
     color: #67AAF9;
 }
 
+.disabled {
+    pointer-events: none;
+    opacity: 0.2;
+}
+
 a {
     background-color: transparent;
     color: #FDFFFC;
-    transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, opacity 0.25s ease-in-out;
+    -webkit-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, opacity 0.25s ease-in-out;
 }
 
 a:hover {

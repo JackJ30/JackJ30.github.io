@@ -3,22 +3,39 @@ var shownArticles = [];
 
 addEventListeners();
 
+// Interests --------------------------------------------------
+var programmingInterest = false;
+var graphicsInterest = false;
+
 function addEventListeners()
 {
-    document.getElementById("next-button").addEventListener("click", selectInterests);
+    document.getElementById("next-button").addEventListener("click", showSelectInterests);
+    document.getElementById("programming-interest").addEventListener('change', function() {
+        programmingInterest = !programmingInterest;
+        onChangeInterests();
+    });
+    document.getElementById("graphics-interest").addEventListener('change', function() {
+        graphicsInterest = !graphicsInterest;
+        onChangeInterests();
+    });
 }
 
-function selectInterests()
+function showSelectInterests()
 {
     var landingPage = document.getElementById("landing-page");
     landingPage.style = "opacity: 0;";
-    document.getElementById("next-button").removeEventListener("click", selectInterests);
+    document.getElementById("next-button").removeEventListener("click", showSelectInterests);
     landingPage.addEventListener("transitionend", function(e) {
         landingPage.style = "display: none;";
 
         var selectInterestsPage = document.getElementById("select-interests");
         selectInterestsPage.setAttribute('class', "shown")
     })
+}
+
+function onChangeInterests()
+{
+    document.getElementById("continue-button").setAttribute('class', programmingInterest || graphicsInterest ? "" : "disabled");
 }
 
 function showArticles()
