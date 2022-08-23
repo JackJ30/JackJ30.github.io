@@ -1,151 +1,57 @@
 <!DOCTYPE HTML>
-<!--
-	Massively by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+
 <html>
-	<head>
-		<title>Jack jamison Portfolio</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<script type="module" src="index.js"></script>
-	</head>
-	<body class="is-preload">
 
-		<!-- Wrapper -->
-			<div id="wrapper" class="fade-in">
+    <head>
+        <title>Jack Jamison's Portfolio</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="main.css" />
+        <link href="assets/css/fontawesome-all.min.css" rel="stylesheet">
+        <script type="module" src="index.js"></script>
+    </head>
 
-				<!-- Intro -->
-					<div id="intro">
-						<h1>Jack Jamison</h1>
-						<p>A collection of my programming and 3D graphics projects</p>
-						<ul class="actions">
-							<li><a href="#nav" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
-						</ul>
-					</div>
+    <body class="is-preload" onload="document.body.setAttribute('class','loaded')" style="overflow-y: hidden">
+        <div id="wrapper">
+            <div id="intro">
+                <div id="landing-page">
+                    <h1>Jack Jamison</h1>
+                    <p>A collection of my programming and 3D graphics projects</p>
+                    <ul class="actions">
+                        <li>
+                            <a id="next-button"><i class="fa fa-5x fa-forward offset"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <div id="select-interests">
+                    <h1>I care about</h1>
+                    <div class="interests">
+                        <label class="interest">
+                            <input type="checkbox" class="checkbox">
+                            <div class="option_inner">
+                                <div class="icon"><i class="fa fa-code"></i></div>
+                            </div>
+                        </label>
+                        <label class="interest">
+                            <input type="checkbox" class="checkbox">
+                            <div class="option_inner">
+                                <div class="icon"><i class="fa fa-palette"></i></div>
+                            </div>
+                        </label>
+                    </div>
+                    <ul class="actions">
+                        <li>
+                            <a id="continue-button"><i class="fa fa-5x fa-arrow-down"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
 
-				<!-- Nav -->
-					<nav id="nav">
-						<ul class="icons">
-							<li><a href="https://github.com/UhGoomba" target="_blank" rel="noopener noreferrer" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-							<li><a href="https://uhgoomba.itch.io/" target="_blank" rel="noopener noreferrer" class="icon brands fa-itch-io"><span class="label">Itch</span></a></li>
-							<li><a href="#" target="_blank" rel="noopener noreferrer" class="icon brands fa-artstation"><span class="label">Artstation</span></a></li>
-						</ul>
-					</nav>
-
-				<!-- Content -->
-					<div style="display: block">
-						<!-- Main -->
-						<div id="main">
-
-							<!-- Posts -->
-							<section class="posts-container">
-
-								<!-- Programming -->
-								<section class="posts" id="programming-articles">
-									<header class="column-header">Programming</header>
-
-									<!--<article>
-										<header>
-											<span class="date">Unknown Date</span>
-											<h2><a href="#">Sed magna<br />
-												ipsum faucibus</a></h2>
-										</header>
-										<a href="#" class="image fit"><img src="images/pic02.jpg" alt="" /></a>
-										<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
-										<ul class="actions special">
-											<li><a href="#" class="button">View Page</a></li>
-										</ul>
-									</article>
-									-->
-								</section>
-
-								<div class="vertical-line"></div>
-
-								<!-- Graphics -->
-								<section class="posts" id="graphics-articles">
-									<header class="column-header">Graphics</header>
-
-								</section>
-
-							</section>
-
-							<!-- Footer -->
-							<footer>
-								<div class="pagination">
-									<!--<a href="#" class="previous">Prev</a>-->
-									<a href="#" class="page active">1</a>
-									<a href="#" class="page">2</a>
-									<a href="#" class="page">3</a>
-									<span class="extra">&hellip;</span>
-									<a href="#" class="page">8</a>
-									<a href="#" class="page">9</a>
-									<a href="#" class="page">10</a>
-									<a href="#" class="next">Next</a>
-								</div>
-							</footer>
-
-						</div>
-
-						<!-- Footer -->
-						<footer id="footer">
-							<section>
-								<form method="post" action="#">
-									<div class="fields">
-										<div class="field">
-											<label for="name">Name</label>
-											<input type="text" name="name" id="name" />
-										</div>
-										<div class="field">
-											<label for="email">Email</label>
-											<input type="text" name="email" id="email" />
-										</div>
-										<div class="field">
-											<label for="message">Message</label>
-											<textarea name="message" id="message" rows="3"></textarea>
-										</div>
-									</div>
-									<ul class="actions">
-										<li><input type="submit" value="Send Message" /></li>
-									</ul>
-								</form>
-							</section>
-							<section class="split contact">
-								<section>
-									<h3>Email</h3>
-									<p><a href="mailto: jackqjamison@gmail.com">jackqjamison@gmail.com</a></p>
-								</section>
-								<section>
-									<h3>Social</h3>
-									<ul class="icons alt">
-										<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
-										<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
-										<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-										<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-									</ul>
-								</section>
-							</section>
-						</footer>
-
-						<!-- Copyright -->
-						<div id="copyright">
-							<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
-						</div>
-					</div>
-
-			</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
+            <div id="nav">
+                <a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-artstation"></i></a>
+                <a href=" https://github.com/UhGoomba" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                <a href="https://UhGoomba.itch.io" target="_blank" rel="noopener noreferrer"><i class="fab fa-itch-io"></i></a>
+            </div>
+        </div>
+    </body>
 </html>
