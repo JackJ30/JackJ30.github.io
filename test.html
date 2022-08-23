@@ -8,23 +8,48 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
         <link rel="stylesheet" href="main.css" />
         <link href="assets/css/fontawesome-all.min.css" rel="stylesheet">
+        <script type="module" src="index.js"></script>
     </head>
 
-    <body class="is-preload" onload="document.body.setAttribute('class','loaded')">
+    <body class="is-preload" onload="document.body.setAttribute('class','loaded')" style="overflow-y: hidden">
         <div id="wrapper">
             <div id="intro">
-                <h1>Jack Jamison</h1>
-                <p>A collection of my programming and 3D graphics projects</p>
-                <ul class="actions">
-                    <li>
-                        <a href="#nav"><i class="fa fa-5x fa-forward"></i></a>
-                    </li>
-                </ul>
+                <div id="landing-page">
+                    <h1>Jack Jamison</h1>
+                    <p>A collection of my programming and 3D graphics projects</p>
+                    <ul class="actions">
+                        <li>
+                            <a id="next-button"><i class="fa fa-5x fa-forward offset"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <div id="select-interests">
+                    <h1>I care about</h1>
+                    <div class="interests">
+                        <label class="interest">
+                            <input type="checkbox" class="checkbox">
+                            <div class="option_inner">
+                                <div class="icon"><i class="fa fa-code"></i></div>
+                            </div>
+                        </label>
+                        <label class="interest">
+                            <input type="checkbox" class="checkbox">
+                            <div class="option_inner">
+                                <div class="icon"><i class="fa fa-palette"></i></div>
+                            </div>
+                        </label>
+                    </div>
+                    <ul class="actions">
+                        <li>
+                            <a id="continue-button"><i class="fa fa-5x fa-arrow-down"></i></a>
+                        </li>
+                    </ul>
+                </div>
             </div>
 
             <div id="nav">
                 <a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-artstation"></i></a>
-                <a href="https://github.com/UhGoomba" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                <a href=" https://github.com/UhGoomba" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
                 <a href="https://UhGoomba.itch.io" target="_blank" rel="noopener noreferrer"><i class="fab fa-itch-io"></i></a>
             </div>
         </div>

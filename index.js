@@ -1,7 +1,25 @@
 import content from "./content.json" assert {type: 'json'};
 var shownArticles = [];
 
-showArticles();
+addEventListeners();
+
+function addEventListeners()
+{
+    document.getElementById("next-button").addEventListener("click", selectInterests);
+}
+
+function selectInterests()
+{
+    var landingPage = document.getElementById("landing-page");
+    landingPage.style = "opacity: 0;";
+    document.getElementById("next-button").removeEventListener("click", selectInterests);
+    landingPage.addEventListener("transitionend", function(e) {
+        landingPage.style = "display: none;";
+
+        var selectInterestsPage = document.getElementById("select-interests");
+        selectInterestsPage.setAttribute('class', "shown")
+    })
+}
 
 function showArticles()
 {

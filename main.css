@@ -24,9 +24,8 @@
     float: left;
     width: 13vh;
     height: 13vh;
-    border: 0.7vh solid #909090;
+    border: 0.7vh solid #FDFFFC;
     border-radius: 100%;
-    border-color: white;
 }
 
 .actions a > * {
@@ -34,18 +33,80 @@
 }
 
 .actions i {
-    transform: translate(0.3vw, 2.5vh);
+    transform: translate(0, 2.5vh);
+}
+
+.actions i.offset {
+    transform: translate(0.3vw, 2.5vh) !important;
+}
+
+.interests {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin-bottom: 2vh;
+}
+
+.interests .interest {
+    display: block;
+    position: relative;
+    width: 20vh;
+    height: 20vh;
+    margin-right: 2vh;
+    margin-left: 2vh;
+}
+
+.interests .interest .checkbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 0;
+}
+
+.interest .option_inner {
+    width: 15.5vh;
+    height: 14vh;
+    background-color: #ffffff;
+    border-radius: 1vh;
+    text-align: center;
+    cursor: pointer;
+    color: #717981;
+    display: block;
+    border: 0.85vh solid #717981;
+    position: relative;
+    padding: 1.3vh;
+    padding-top: 2.8vh;
+    margin-right: 0;
+    font-family: "Font Awesome 5 Free";
+
+    transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out, border-width 0.2s ease-in-out, padding 0.2s ease-in-out;
+    -webkit-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out, border-width 0.2s ease-in-out, padding 0.2s ease-in-out;
+
+}
+
+.interest .option_inner .icon .fa {
+    font-size: 12vh;
+}
+
+.interest .checkbox:checked ~ .option_inner {
+    color: #67AAF9;
+    border: 0.85vh solid #67AAF9;
+}
+
+.interest .option_inner:hover {
+    color: #67AAF9;
 }
 
 a {
     background-color: transparent;
-    color: white;
+    color: #FDFFFC;
     transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
 a:hover {
-    color: #18bfef !important;
-    border-color: #18bfef !important;
+    color: #67AAF9 !important;
+    border-color: #67AAF9 !important;
 }
 
 body {
@@ -57,6 +118,10 @@ ul {
     list-style: none;
 }
 
+input[type="checkbox"] {
+    border-radius: 10vh;
+}
+
 #wrapper {
     background: url("images/bg.jpg") no-repeat center top fixed;
     background-size: cover;
@@ -64,7 +129,7 @@ ul {
     top: 0;
     bottom: 0;
     z-index: -1;
-    min-height: 100rem;
+    min-height: 100vh;
     opacity: 0;
 
     -webkit-transition: opacity 1s ease-in-out;
@@ -92,6 +157,38 @@ ul {
     transition: transform 1s;
 }
 
+#landing-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    transition: opacity 0.15s;
+    -webkit-transition: opacity 0.15s;
+}
+
+#select-interests {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    opacity: 0;
+}
+
+#select-interests.shown {
+    display: flex;
+    animation-name: display-interests;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes display-interests {
+    from { opacity: 0; }
+    to {opacity: 1; }
+}
+
 .loaded #intro {
     transform: translateY(0vh);
 }
@@ -99,7 +196,7 @@ ul {
 #intro h1 {
     font-size: 12.5vh;
     line-height: 1;
-    color: white;
+    color: #FDFFFC;
     font-family: "Source Sans Pro", Helvetica, sans-serif;
     font-weight: 750;
     letter-spacing: 0.02em;
@@ -109,7 +206,7 @@ ul {
 
 #intro p {
     font-family: "Merriweather", Georgia, serif;
-    color: white;
+    color: #FDFFFC;
     font-size: 3.64583334vh;
     font-style: italic;
     margin-top: -0.4vh;
