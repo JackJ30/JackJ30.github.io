@@ -18,6 +18,7 @@ function addEventListeners()
         graphicsInterest = !graphicsInterest;
         onChangeInterests();
     });
+    document.getElementById("continue-button").addEventListener('click', showContent);
 }
 
 function showSelectInterests()
@@ -36,6 +37,12 @@ function showSelectInterests()
 function onChangeInterests()
 {
     document.getElementById("continue-button").setAttribute('class', programmingInterest || graphicsInterest ? "" : "disabled");
+}
+
+function showContent()
+{
+    document.body.style = "overflow-y: scroll";
+    document.getElementById("content").style = "display: block";
 }
 
 function showArticles()

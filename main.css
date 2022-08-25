@@ -103,6 +103,10 @@
     opacity: 0.2;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 a {
     background-color: transparent;
     color: #FDFFFC;
@@ -221,6 +225,9 @@ input[type="checkbox"] {
 }
 
 #nav {
+    top: 0;
+    position: sticky;
+
     margin-left: 10vw;
     margin-right: 10vw;
     width: 80vw;
@@ -240,4 +247,12 @@ input[type="checkbox"] {
 
 #nav a > * {
     font-size: 5vh;
+}
+
+#content {
+    margin-left: 10vw;
+    margin-right: 10vw;
+    width: 80vw;
+    min-height: 60vw;
+    background-color: #11151C;
 }
