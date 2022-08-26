@@ -227,18 +227,21 @@ input[type="checkbox"] {
 #nav {
     top: 0;
     position: sticky;
+    z-index: 1000;
 
     margin-left: 10vw;
     margin-right: 10vw;
     width: 80vw;
     height: 8vh;
-    background-color: rgba(255, 255, 255, 0.176);
+    background-color: rgba(255, 255, 255, 0.3);
 
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: row;
     gap: 3vw;
+
+    filter: drop-shadow(1vh 1vh 1vh rgba(0, 0, 0, 0.5));
 }
 
 #nav a {
@@ -255,4 +258,30 @@ input[type="checkbox"] {
     width: 80vw;
     min-height: 60vw;
     background-color: #11151C;
+}
+
+#column-holder {
+    display: flex;
+    height: fit-content;
+    padding: 2vh;
+
+    flex-direction: row;
+    align-items: stretch;
+    gap: 1vw;
+}
+
+.post-column {
+    background-color: #212D40;
+    border-radius: 1vh;
+    width: 100%;
+    min-height: 80vh;
+    filter: drop-shadow(1vh 1vh 1vh rgba(0, 0, 0, 0.5));
+    padding: 1vh;
+}
+
+.post {
+    background-color: #FDFFFC;
+    border-radius: 1vh;
+    min-height: 40vh;
+    filter: drop-shadow(1vh 1vh 1vh rgba(0, 0, 0, 0.5));
 }

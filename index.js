@@ -43,6 +43,9 @@ function showContent()
 {
     document.body.style = "overflow-y: scroll";
     document.getElementById("content").style = "display: block";
+
+    document.getElementById("programming-column").style = "display: " + (programmingInterest ? "block" : "none").toString();
+    document.getElementById("graphics-column").style = "display: " + (graphicsInterest ? "block" : "none").toString();
 }
 
 function showArticles()
