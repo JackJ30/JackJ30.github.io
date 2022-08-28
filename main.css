@@ -142,6 +142,9 @@ input[type="checkbox"] {
     min-height: 100vh;
     opacity: 0;
 
+    overflow-x: hidden;
+    position: fixed;
+
     -webkit-transition: opacity 1s ease-in-out;
     transition: opacity 1s ease-in-out;
 }
@@ -273,10 +276,16 @@ input[type="checkbox"] {
 .post-column {
     background-color: #212D40;
     border-radius: 1vh;
-    width: 100%;
+    flex: 1;
     min-height: 80vh;
     filter: drop-shadow(1vh 1vh 1vh rgba(0, 0, 0, 0.5));
     padding: 1vh;
+    text-align: center;
+    width: 10vw;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
 }
 
 .post {
@@ -284,4 +293,20 @@ input[type="checkbox"] {
     border-radius: 1vh;
     min-height: 40vh;
     filter: drop-shadow(1vh 1vh 1vh rgba(0, 0, 0, 0.5));
+    text-align: center;
+    padding: 1vh;
+}
+
+.post image {
+    object-fit: scale-down;
+}
+
+.post-column h2 {
+    color: #FDFFFC;
+    margin-top: 0;
+    margin-bottom: 1vh;
+    font-size: 9vh;
+    font-family: "Source Sans Pro", Helvetica, sans-serif;
+    font-weight: bolder;
+    text-transform: capitalize;
 }

@@ -44,27 +44,37 @@ function showContent()
     document.body.style = "overflow-y: scroll";
     document.getElementById("content").style = "display: block";
 
-    document.getElementById("programming-column").style = "display: " + (programmingInterest ? "block" : "none").toString();
-    document.getElementById("graphics-column").style = "display: " + (graphicsInterest ? "block" : "none").toString();
+    document.getElementById("programming-column").style = "display: " + (programmingInterest ? "flex" : "none").toString();
+    document.getElementById("graphics-column").style = "display: " + (graphicsInterest ? "flex" : "none").toString();
+
+    showArticles();
 }
 
 function showArticles()
 {
+    for (let i = 0; i < shownArticles.length; i++)
+    {
+        shownArticles[i].remove();
+    }
+
     for (let i = 0; i < content["active-pages"].length; i++)
     {
         let obj = content["active-pages"][i];
+        if(obj.type == "programming" && !programmingInterest) continue;
+        if(obj.type == "graphics" && !graphicsInterest) continue;
 
         var parent;
         switch (obj.type) {
             case "programming":
-                parent = document.getElementById("programming-articles");
+                parent = document.getElementById("programming-column");
                 break;
             case "graphics":
-                parent = document.getElementById("graphics-articles");
+                parent = document.getElementById("graphics-column");
                 break;
         }
 
         var newArticle = document.createElement("article");
+        newArticle.className = "post";
         parent.appendChild(newArticle);
 
         var header = newArticle.appendChild(document.createElement("header"));
@@ -92,5 +102,7 @@ function showArticles()
         viewPageLink.href = obj.link;
         viewPageLink.className = "button";
         viewPageLink.textContent = "View Page";
+
+        shownArticles.push(newArticle);
     }
 }
