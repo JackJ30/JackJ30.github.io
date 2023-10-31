@@ -1,5 +1,5 @@
 +++
-title = 'First Blog Post'
+title = 'Website Has Been Created'
 date = 2023-10-22T16:10:08-04:00
 draft = false
 tags = [

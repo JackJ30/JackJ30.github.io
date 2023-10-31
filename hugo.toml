@@ -35,10 +35,10 @@ paginate     = 10
     series   = "series"
 
 # And you can even create generic menu
-[[menu.main]]
-    identifier = "blog"
-    name       = "Blog"
-    url        = "/posts"
+# [[menu.main]]
+#     identifier = "blog"
+#     name       = "Blog"
+#     url        = "/posts"
 [[menu.main]]
     identifier = "portfolio"
     name       = "Portfolio"
