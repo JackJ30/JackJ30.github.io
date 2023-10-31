@@ -1,0 +1,78 @@
+{{ $list :=  (where .Site.Pages "Section" "projects") }}
+<script>
+    let sidebars = document.getElementsByClassName('list-sidebar');
+    let grid_lists = document.getElementsByClassName('grid-list');
+    let start_scroll = 100;
+    let start_width = 25;
+    let remove_speed = 0.03;
+    window.onscroll = function (e) {
+        console.log(window.scrollY)
+        if (window.scrollY > start_scroll) {
+            for (let i = 0; i < sidebars.length; i++) {
+                sidebars[i].style.left = ((window.scrollY - start_scroll) * -remove_speed).toString().concat('%');
+            }
+            for (let i = 0; i < grid_lists.length; i++) { 
+                grid_lists[i].style.paddingLeft = Math.max(0,start_width - (window.scrollY - start_scroll) * remove_speed).toString().concat('%');
+            }
+        }
+        else
+        {
+            for (let i = 0; i < sidebars.length; i++) {
+                sidebars[i].style.left = "0%";
+            }
+            for (let i = 0; i < grid_lists.length; i++) {
+                grid_lists[i].style.paddingLeft = start_width.toString().concat('%');
+            }
+        }
+    };
+</script>
+<div style="display: flex;">
+    <div class="list-sidebar">
+        <p>I have been programming for <b>8 years</b>, and 3D modeling for <b>3 years</b>.</p>
+        <hr>
+        <p>I have participated in <b>5</b> game jam competitions, and released those <b>5</b> games.</p>
+        <hr>
+        <p>My most used programming languages are <b>C#</b>, <b>Java</b>, <b>Python</b>, and <b>Javascript</b>.</p>
+        <hr>
+        <p>This portfolio contains <b>{{$list.Len}}</b> projects including demos, games, experiments and 3D art projects.</p>
+        {{- with .Site.Params.social }}
+            <hr>
+            <br>
+            <div>
+                {{ partial "social-icons.html" . }}
+            </div>
+        {{- end }}
+    </div>
+    <div class="grid-list">
+        {{- range $index, $element := $list.ByWeight }}
+            {{ range .Pages}} 
+                <div class="list-entry">
+                    <a href="{{ .RelPermalink }}">
+                        {{ if .Params.thumbnail }}
+                            <img src="/{{.Params.thumbnail}}">
+                        {{ else if .Params.Cover }}
+                            <img src="/{{.Params.Cover}}">
+                        {{ else }}
+                            <img src="https://placehold.co/192x108">
+                        {{ end }}
+                        <div class="list-entry-title">
+                            <p><b>{{ .Title }}</b></p>
+                        </div>
+                        <div class="list-entry-tags">
+                            {{ if in .Params.Tags "art" }}
+                                {{ if in .Params.Tags "video" }}
+                                <img src="/svg/video.svg"></img>
+                                {{ else}}
+                                    <img src="/svg/image.svg"></img>
+                                {{ end }}
+                            {{ end }}
+                            {{ if in .Params.Tags "programming" }}
+                                <img src="/svg/code.svg"></img>
+                            {{ end }}
+                        </div>
+                    </a>
+                </div>
+            {{ end }}
+        {{- end }}
+    </div>
+</div>

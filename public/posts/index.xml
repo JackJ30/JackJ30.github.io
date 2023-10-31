@@ -1,0 +1,26 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Posts on Jack Jamison</title>
+        <link>localhost/posts/</link>
+        <description>Recent content in Posts on Jack Jamison</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Sun, 22 Oct 2023 16:10:08 -0400</lastBuildDate>
+        <atom:link href="localhost/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>First Blog Post</title>
+            <link>localhost/posts/init/</link>
+            <pubDate>Sun, 22 Oct 2023 16:10:08 -0400</pubDate>
+            
+            <guid>localhost/posts/init/</guid>
+            <description>Welcome to my website. I&amp;rsquo;ve just set this up to hold my porfolio, but I plan on including blog posts and articles about what I am working on. This website is built in Hugo. I&amp;rsquo;m still learning markdown, and how to combine it with custom hugo html, so my future posts should be less barebones.
+Jack Jamison</description>
+            <content type="html"><![CDATA[<p>Welcome to my website. I&rsquo;ve just set this up to hold my porfolio, but I plan on including blog posts and articles about what I am working on.
+This website is built in <a href="https://gohugo.io/">Hugo</a>. I&rsquo;m still learning markdown, and how to combine it with custom hugo html, so my future posts should be less barebones.</p>
+<p>Jack Jamison</p>
+]]></content>
+        </item>
+        
+    </channel>
+</rss>
