@@ -1,5 +1,5 @@
 +++
-title = 'Blade Runner Market Concept'
+title = 'Blade Runner Market'
 date = 2023-10-22T17:44:29-04:00
 draft = false
 weight = 4
