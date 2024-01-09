@@ -25,7 +25,7 @@ paginate     = 10
   enableThemeToggle = true
 
   # Metadata mostly used in document's head
-  description = "My new homepage or blog"
+  description = "Jack Jamison Portfolio"
   keywords = "homepage, blog"
   images = [""]
 
