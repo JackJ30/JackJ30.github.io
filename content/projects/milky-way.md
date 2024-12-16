@@ -3,7 +3,7 @@ title = 'Milky Way Animation'
 date = 2023-10-22T17:44:29-04:00
 draft = false
 short_description = ''
-youtube_id = 'xbW1lIwynYs'
+youtube_id = '2qqgC75TUOM'
 cover = 'img/cover/milky-way.png'
 tags = [
     "blender",
