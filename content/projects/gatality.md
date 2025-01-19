@@ -1,6 +1,6 @@
 +++
 title = 'Gatality'
-date = 2025-01-18T17:44:29-04:00
+date = 2025-01-19T17:44:29-04:00
 draft = false
 weight = 4
 cover = 'img/cover/gatality.png'
@@ -8,7 +8,7 @@ short_description = ''
 tags = [
     "c++",
     "programming",
-    "graphics
+	"graphics"
 ]
 +++
 [Gatality](https://gatality.com/) is an open-source desktop application for designing and simulating digital circuits at scale.
