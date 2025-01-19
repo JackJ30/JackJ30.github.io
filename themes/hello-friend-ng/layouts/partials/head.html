@@ -63,7 +63,6 @@
 {{- if templates.Exists "partials/extra-head.html" -}}
     {{ partial "extra-head.html" . }}
 {{- end }}
-4
 <!-- Plausible.io -->
 {{- if $.Site.Params.plausibleDataDomain }}
     <script defer data-domain="{{ .Site.Params.plausibleDataDomain }}" src="{{ .Site.Params.plausibleScriptSource }}"></script>
