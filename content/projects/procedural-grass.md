@@ -7,10 +7,10 @@ cover = 'img/cover/procedural-grass.png'
 youtube_id = '7k7hfSHDg-Y'
 short_description = ''
 tags = [
-    "godot",
-    "programming",
-    "video",
-	""
+	"godot",
+	"programming",
+	"video",
+	"graphics"
 ]
 +++
 This is a pretty simple [Godot](https://godotengine.org/) project which generates a patch of grass and then uses shaders to texture and deform it.
