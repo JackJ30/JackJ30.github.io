@@ -7,6 +7,7 @@ cover = 'img/cover/goomba-render.png'
 short_description = ''
 tags = [
     "c++",
+	"programming",
     "graphics"
 ]
 +++
